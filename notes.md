@@ -9,7 +9,9 @@ Things installed with jspm:
 All reflected in package.json.
 
 Dev tool installed with npm:
+- npm install --save-dev jspm
 - npm install --save-dev html-dist
+- npm install --save-dev live-server
 
 To run locally installed jspm and live-server add ./node_modules/.bin to PATH of shell.
 
