@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "jspm install",
+    "dist": "rm -rf dist; mkdir dist; jspm bundle-sfx src/main dist/app.min.js;./node_modules/.bin/html-dist index.html --remove-all --minify --insert app.min.js -o dist/index.html",
+    "dist-mini": "rm -rf dist; mkdir dist; jspm bundle-sfx src/main dist/app.min.js --minify;./node_modules/.bin/html-dist index.html --remove-all --minify --insert app.min.js -o dist/index.html"
   },
   "author": "",
   "license": "ISC",
@@ -14,9 +17,15 @@
     "live-server": "^0.8.2"
   },
   "jspm": {
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.4.7",
+      "bootstrap": "github:twbs/bootstrap@^3.3.5",
+      "css": "github:systemjs/plugin-css@^0.1.19"
+    },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "clean-css": "npm:clean-css@^3.4.6",
       "core-js": "npm:core-js@^1.1.4"
     }
   }

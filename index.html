@@ -11,5 +11,16 @@
     </head>
     <body>
         <h1>NG1+JSPM+ES6</h1>
+
+        <div ng-controller="HelloCtrl as hello">
+            Hälsning: {{hello.greeting}}
+            <ul>
+                <li ng-repeat="repo in hello.repos">
+                    <h3>{{repo.name}}</h3>
+                    <p>{{repo.description}}</p>
+                </li>
+            </ul>
+            <!--all repos:{{hello.repos}}-->
+        </div>
     </body>
 </html>

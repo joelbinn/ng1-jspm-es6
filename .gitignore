@@ -3,4 +3,5 @@ node_modules/
 target/
 dist/
 typings/
-node/
+node
+etc/
