@@ -14,25 +14,3 @@ Dev tool installed with npm:
 - npm install --save-dev live-server
 
 To run locally installed jspm and live-server add ./node_modules/.bin to PATH of shell.
-
-Build
------
-### Develop
-Just run
-    
-    live-server
-
-and hack away.
-
-### Distribution
-
-    npm run dist
-    
-result available in ./dist
-    
-### Minified distribution
-
-    npm run dist-mini
-    
-result available in ./dist
-    
