@@ -5,6 +5,7 @@ Things installed with jspm:
 - jspm install bootstrap
 - jspm install angular
 - jspm install npm:clean-css --dev
+
 All reflected in package.json.
 
 Dev tool installed with npm:
