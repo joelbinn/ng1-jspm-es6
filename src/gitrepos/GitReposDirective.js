@@ -1,3 +1,13 @@
+const htmlTemplate =  `
+<ul>
+  <li ng-repeat="repo in viewModel.repos">
+    <h3>{{repo.name}}</h3>
+    <p>{{repo.description}}</p>
+  </li>
+</ul>
+`;
+
+
 class GitReposDirective {
   constructor() {
     this.restrict = 'E';
@@ -21,14 +31,5 @@ class GitReposCtrl {
 }
 
 GitReposCtrl.$inject = ['$http'];
-
-const htmlTemplate =  `
-<ul>
-  <li ng-repeat="repo in viewModel.repos">
-    <h3>{{repo.name}}</h3>
-    <p>{{repo.description}}</p>
-  </li>
-</ul>
-`;
 
 export { GitReposDirective };
