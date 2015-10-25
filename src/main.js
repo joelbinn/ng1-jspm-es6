@@ -6,6 +6,6 @@ import {gitReposModule} from './gitrepos/module';
 
 const main = angular
   .module('main', [gitReposModule.name])
-  .directive('app', AppDirective.directiveFactory);
+  .directive(AppDirective.directiveName(), AppDirective.directiveFactory);
 
 console.debug('main has started:', main);
