@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "jspm install",
-    "dist": "rm -rf dist; mkdir dist; jspm bundle-sfx src/main dist/app.min.js;./node_modules/.bin/html-dist index.html --remove-all --minify --insert app.min.js -o dist/index.html",
-    "dist-mini": "rm -rf dist; mkdir dist; jspm bundle-sfx src/main dist/app.min.js --minify;./node_modules/.bin/html-dist index.html --remove-all --minify --insert app.min.js -o dist/index.html"
+    "dist": "rm -rf dist; mkdir dist; cp favicon.png dist/; jspm bundle-sfx src/main dist/app.min.js;./node_modules/.bin/html-dist index.html --remove-all --minify --insert app.min.js -o dist/index.html",
+    "dist-mini": "rm -rf dist; mkdir dist; cp favicon.png dist/; jspm bundle-sfx src/main dist/app.min.js --minify;./node_modules/.bin/html-dist index.html --remove-all --minify --insert app.min.js -o dist/index.html"
   },
   "author": "",
   "license": "ISC",
