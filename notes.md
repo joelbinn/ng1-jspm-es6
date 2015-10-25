@@ -14,3 +14,7 @@ Dev tool installed with npm:
 - npm install --save-dev live-server
 
 To run locally installed jspm and live-server add ./node_modules/.bin to PATH of shell.
+
+Angular 1.x and ES6
+-------------------
+See http://www.sitepoint.com/writing-angularjs-apps-using-es6/

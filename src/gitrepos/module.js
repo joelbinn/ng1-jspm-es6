@@ -1,9 +1,10 @@
+// Inspired by http://www.sitepoint.com/writing-angularjs-apps-using-es6/
 import angular from 'angular';
 
-import {GitReposCtrl} from './GitReposCtrl';
+import {GitReposDirective} from './GitReposDirective';
 
 const gitReposModule = angular.module('gitReposModule', [])
-  .controller('GitReposCtrl', GitReposCtrl);
+  .directive('gitRepos', GitReposDirective.directiveFactory);
 
 console.debug('gitReposModule initialized', gitReposModule);
 

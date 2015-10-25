@@ -14,17 +14,7 @@
             <h1>NG1+JSPM+ES6</h1>
 
             <h2>Mina github-repos</h2>
-
-            <div ng-controller="GitReposCtrl as viewModel">
-                <ul>
-                    <li ng-repeat="repo in viewModel.repos">
-                        <h3>{{repo.name}}</h3>
-
-                        <p>{{repo.description}}</p>
-                    </li>
-                </ul>
-                <!--all repos:{{hello.repos}}-->
-            </div>
+            <git-repos></git-repos>
         </div>
     </body>
 </html>
