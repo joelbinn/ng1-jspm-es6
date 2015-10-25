@@ -10,7 +10,7 @@ PeopleCtrl.$inject = ['$http'];
 const htmlTemplate = `
 <ul>
   <li ng-repeat="person in viewModel.people">
-    <p>{{person.firstName}} {{person.lastName}}</p>
+    <p>{{person._links.self.href}}: {{person.firstName}} {{person.lastName}}</p>
   </li>
 </ul>
 `;
