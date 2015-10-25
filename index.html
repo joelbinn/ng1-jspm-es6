@@ -15,9 +15,9 @@
 
             <h2>Mina github-repos</h2>
 
-            <div ng-controller="HelloCtrl as hello">
+            <div ng-controller="GitReposCtrl as viewModel">
                 <ul>
-                    <li ng-repeat="repo in hello.repos">
+                    <li ng-repeat="repo in viewModel.repos">
                         <h3>{{repo.name}}</h3>
 
                         <p>{{repo.description}}</p>

@@ -1,9 +1,9 @@
-class HelloCtrl {
+class GitReposCtrl {
   constructor($http) {
     $http.get(`https://api.github.com/users/joelbinn/repos`)
       .then(response => this.repos = response.data);
   }
 }
 
-HelloCtrl.$inject = ['$http'];
-export {HelloCtrl};
+GitReposCtrl.$inject = ['$http'];
+export {GitReposCtrl};
