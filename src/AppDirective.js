@@ -1,6 +1,8 @@
 const htmlTemplate = `
 <div class="container">
   <h1>NG1+JSPM+ES6</h1>
+  <h2>Folk</h2>
+  <people></people>
   <h2>Mina github-repos</h2>
   <git-repos></git-repos>
 </div>

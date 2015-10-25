@@ -1,3 +1,12 @@
+class GitReposCtrl {
+  constructor($http) {
+    $http.get(`https://api.github.com/users/joelbinn/repos`)
+      .then(response => this.repos = response.data);
+  }
+}
+
+GitReposCtrl.$inject = ['$http'];
+
 const htmlTemplate =  `
 <ul>
   <li ng-repeat="repo in viewModel.repos">
@@ -7,9 +16,9 @@ const htmlTemplate =  `
 </ul>
 `;
 
-
 class GitReposDirective {
   constructor() {
+    this.scope = {};
     this.restrict = 'E';
     this.template = htmlTemplate;
     this.controller = GitReposCtrl;
@@ -22,14 +31,5 @@ class GitReposDirective {
 }
 
 GitReposDirective.directiveFactory.$inject = ['$http'];
-
-class GitReposCtrl {
-  constructor($http) {
-    $http.get(`https://api.github.com/users/joelbinn/repos`)
-      .then(response => this.repos = response.data);
-  }
-}
-
-GitReposCtrl.$inject = ['$http'];
 
 export { GitReposDirective };
